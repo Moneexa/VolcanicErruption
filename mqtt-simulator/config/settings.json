@@ -1,0 +1,164 @@
+{
+    "BROKER_URL": "34.22.169.86",
+    "BROKER_PORT": 1883,
+    "TOPICS": [
+        {
+            "TYPE": "single",
+            "PREFIX": "temperature-sensor",
+            "TIME_INTERVAL": 5,
+            "RETAIN_PROBABILITY": 0.25,
+            "DATA": [
+                {
+                    "NAME": "temperature",
+                    "TYPE": "int",
+                    "MIN_VALUE": 25,
+                    "MAX_VALUE": 60,
+                    "MAX_STEP": 5
+                }
+            ]
+        },
+        {
+            "TYPE": "single",
+            "PREFIX": "gas-sensor",
+            "TIME_INTERVAL": 5,
+            "RETAIN_PROBABILITY": 0.5,
+            "DATA": [
+                {
+                    "NAME": "CO",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.06,
+                    "MAX_VALUE": 55,
+                    "MAX_STEP": 2
+                },
+                {
+                    "NAME": "CO2",
+                    "TYPE": "float",
+                    "MIN_VALUE": 715.24,
+                    "MAX_VALUE": 5000,
+                    "MAX_STEP": 150
+                },
+                {
+                    "NAME": "Ethane",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.001,
+                    "MAX_VALUE": 0.3,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "SO2",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.5,
+                    "MAX_VALUE": 3000,
+                    "MAX_STEP": 100
+                },
+                {
+                    "NAME": "NO2",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.03,
+                    "MAX_VALUE": 100,
+                    "MAX_STEP": 5
+                }
+            ]
+        },
+        {
+            "TYPE": "single",
+            "PREFIX": "sesmic-sensor",
+            "TIME_INTERVAL": 5,
+            "RETAIN_PROBABILITY": 0.5,
+            "DATA": [
+                {
+                    "NAME": "Ground Deformation",
+                    "TYPE": "int",
+                    "MIN_VALUE": 0,
+                    "MAX_VALUE": 5,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "Gas concentrations",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.001,
+                    "MAX_VALUE": 2000,
+                    "MAX_STEP": 150
+                },
+                {
+                    "NAME": "Volcanic Tremour",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.01,
+                    "MAX_VALUE": 6,
+                    "MAX_STEP": 0.1
+                }
+            ]
+        },
+        {
+            "TYPE": "single",
+            "PREFIX": "GPS-sensor",
+            "TIME_INTERVAL": 5,
+            "RETAIN_PROBABILITY": 0.5,
+            "DATA": [
+                {
+                    "NAME": "latitude",
+                    "TYPE": "float",
+                    "MIN_VALUE": 35.3585,
+                    "MAX_VALUE": 5,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "longitude",
+                    "TYPE": "float",
+                    "MIN_VALUE":138.7272,
+                    "MAX_VALUE": 2000,
+                    "MAX_STEP": 150
+                },
+                {
+                    "NAME": "Elevation",
+                    "TYPE": "float",
+                    "MIN_VALUE": 4,
+                    "MAX_VALUE": 6,
+                    "MAX_STEP": 0.01
+                },
+                {
+                    "NAME": "velocity-n",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.01,
+                    "MAX_VALUE": 6,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "velocity-e",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.01,
+                    "MAX_VALUE": 6,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "velocity-u",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.01,
+                    "MAX_VALUE": 6,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "acceleration-n",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.03,
+                    "MAX_VALUE": 5,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "acceleration-e",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.03,
+                    "MAX_VALUE": 5,
+                    "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "acceleration-u",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0.03,
+                    "MAX_VALUE": 3,
+                    "MAX_STEP": 0.1
+                }
+            ]
+        }
+    ]
+}
