@@ -5,7 +5,7 @@
         {
             "TYPE": "single",
             "PREFIX": "temperature-sensor",
-            "TIME_INTERVAL": 5,
+            "TIME_INTERVAL": 2,
             "RETAIN_PROBABILITY": 0.25,
             "DATA": [
                 {
@@ -20,7 +20,7 @@
         {
             "TYPE": "single",
             "PREFIX": "gas-sensor",
-            "TIME_INTERVAL": 5,
+            "TIME_INTERVAL": 2,
             "RETAIN_PROBABILITY": 0.5,
             "DATA": [
                 {
@@ -63,7 +63,7 @@
         {
             "TYPE": "single",
             "PREFIX": "sesmic-sensor",
-            "TIME_INTERVAL": 5,
+            "TIME_INTERVAL": 2,
             "RETAIN_PROBABILITY": 0.5,
             "DATA": [
                 {
@@ -92,36 +92,36 @@
         {
             "TYPE": "single",
             "PREFIX": "GPS-sensor",
-            "TIME_INTERVAL": 5,
+            "TIME_INTERVAL": 2,
             "RETAIN_PROBABILITY": 0.5,
             "DATA": [
                 {
                     "NAME": "latitude",
                     "TYPE": "float",
                     "MIN_VALUE": 35.3585,
-                    "MAX_VALUE": 5,
+                    "MAX_VALUE": 37.3585,
                     "MAX_STEP": 0.1
                 },
                 {
                     "NAME": "longitude",
                     "TYPE": "float",
                     "MIN_VALUE":138.7272,
-                    "MAX_VALUE": 2000,
-                    "MAX_STEP": 150
+                    "MAX_VALUE": 139.654,
+                    "MAX_STEP": 0.0001
                 },
                 {
                     "NAME": "Elevation",
                     "TYPE": "float",
                     "MIN_VALUE": 4,
                     "MAX_VALUE": 6,
-                    "MAX_STEP": 0.01
+                    "MAX_STEP": 0.0001
                 },
                 {
                     "NAME": "velocity-n",
                     "TYPE": "float",
                     "MIN_VALUE": 0.01,
                     "MAX_VALUE": 6,
-                    "MAX_STEP": 0.1
+                    "MAX_STEP": 0.0001
                 },
                 {
                     "NAME": "velocity-e",
