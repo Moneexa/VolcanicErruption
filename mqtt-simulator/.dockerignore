@@ -1,0 +1,4 @@
+mqtt-simulator/__pychache__
+mqtt-simulator/__pychache__/**/*
+mqtt-simulator/venv
+mqtt-simulator/venv/**/*

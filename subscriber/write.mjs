@@ -55,6 +55,7 @@ client.on('connect', function () {
 })
 
 client.on('message', function (topic, message) {
+  console.log(new Date().toLocaleTimeString(), 'Topic: ', topic)
   switch (topic) {
     case "gas-sensor":
       const data = JSON.parse(message.toString())

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mqtt-simulator
+  namespace: mohsin
+  labels:
+    team: il-tempo-gigante
+    service: itg
+spec:
+  selector:
+    matchLabels:
+      app: mqtt-simulator
+  template:
+    metadata:
+      labels:
+        app: mqtt-simulator
+        type: primary
+        team: il-tempo-gigante
+        service: itg
+    spec:
+      containers:
+        - image: moneeza/mqtt-simulator
+          name: mqtt-simulator

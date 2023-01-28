@@ -5,7 +5,7 @@
         {
             "TYPE": "single",
             "PREFIX": "temperature-sensor",
-            "TIME_INTERVAL": 2,
+            "TIME_INTERVAL": 5,
             "RETAIN_PROBABILITY": 0.25,
             "DATA": [
                 {
@@ -20,7 +20,7 @@
         {
             "TYPE": "single",
             "PREFIX": "gas-sensor",
-            "TIME_INTERVAL": 2,
+            "TIME_INTERVAL": 5,
             "RETAIN_PROBABILITY": 0.5,
             "DATA": [
                 {
@@ -63,7 +63,7 @@
         {
             "TYPE": "single",
             "PREFIX": "sesmic-sensor",
-            "TIME_INTERVAL": 2,
+            "TIME_INTERVAL": 5,
             "RETAIN_PROBABILITY": 0.5,
             "DATA": [
                 {
@@ -92,7 +92,7 @@
         {
             "TYPE": "single",
             "PREFIX": "GPS-sensor",
-            "TIME_INTERVAL": 2,
+            "TIME_INTERVAL": 5,
             "RETAIN_PROBABILITY": 0.5,
             "DATA": [
                 {
