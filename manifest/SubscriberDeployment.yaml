@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: subscriber
+  namespace: mohsin
+  labels:
+    team: il-tempo-gigante
+    service: itg
+spec:
+  selector:
+    matchLabels:
+      app: subscriber
+  template:
+    metadata:
+      labels:
+        app: subscriber
+        type: primary
+        team: il-tempo-gigante
+        service: itg
+    spec:
+      containers:
+        - image: moneeza/subscriber
+          name: subscriber
+          envFrom:
+          - secretRef:
+              name: volcanodb-secrets

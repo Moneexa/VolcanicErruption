@@ -1,8 +1,12 @@
-import * as dotenv from 'dotenv' 
-dotenv.config();
+import * as dotenv from "dotenv";
+if (!process.env["INFLUX_TOKEN"]) {
+  dotenv.config();
+}
 
 /** InfluxDB v2 URL */
-const url = process.env["INFLUX_URL"] || "https://eu-central-1-1.aws.cloud2.influxdata.com";
+const url =
+  process.env["INFLUX_URL"] ||
+  "https://eu-central-1-1.aws.cloud2.influxdata.com";
 /** InfluxDB authorization token */
 const token = process.env["INFLUX_TOKEN"] || "";
 /** Organization within InfluxDB  */
