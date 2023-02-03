@@ -9,9 +9,7 @@ services:
         tag: "mqtt-sim"
   subscriber:
     environment:
-      -  INFLUX_USER=admin
-      -  INFLUX_PASSWORD=admin123
-      -  INFLUX_TOKEN="-0aCQvU1cf8bnz7Dm5_mlEVvpMgKiiYpJqrLtMTY_CSIWRjw9KBNWF4lxZPp_dlsLy0R_CphAkmi1iZ05Aukpw=="
+      -  INFLUX_TOKEN=F8FeBt5rxbrDDNnu0IIZuKMnSArNPGI6FI75kjaMIapA1N21eLUYYpWq4R3xz4h2jnVinZxX1XFLw_O3FO_s_w==
     depends_on:
       - broker
     build:
