@@ -8,7 +8,7 @@ import { url, token, org, bucket } from './env.mjs'
 import { connect } from 'mqtt';
 
 // const mqtt = require('mqtt')
-const client = connect('mqtt://34.22.169.86')
+const client = connect('mqtt://host.docker.internal')
 
 console.log('*** WRITE POINTS ***')
 // create a write API, expecting point timestamps in nanoseconds (can be also 's', 'ms', 'us')

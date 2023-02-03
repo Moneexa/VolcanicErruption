@@ -1,0 +1,33 @@
+version: "3.9"
+services: 
+  mqtt-simulator:
+    depends_on:
+      - broker
+    build:
+      context: ./mqtt-simulator
+      args: 
+        tag: "mqtt-sim"
+  subscriber:
+    environment:
+      -  INFLUX_USER=admin
+      -  INFLUX_PASSWORD=admin123
+      -  INFLUX_TOKEN="-0aCQvU1cf8bnz7Dm5_mlEVvpMgKiiYpJqrLtMTY_CSIWRjw9KBNWF4lxZPp_dlsLy0R_CphAkmi1iZ05Aukpw=="
+    depends_on:
+      - broker
+    build:
+      context: ./subscriber
+      args: 
+        tag: "subscriber"
+  broker:
+    image: "eclipse-mosquitto:2.0.12"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+
+  
+
+
+
+  
