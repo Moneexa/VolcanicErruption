@@ -84,7 +84,7 @@
                     "NAME": "Volcanic Tremour",
                     "TYPE": "float",
                     "MIN_VALUE": 0.01,
-                    "MAX_VALUE": 6,
+                    "MAX_VALUE": 6.5,
                     "MAX_STEP": 0.1
                 }
             ]
