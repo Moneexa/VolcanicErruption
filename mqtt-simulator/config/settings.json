@@ -19,6 +19,36 @@
         },
         {
             "TYPE": "single",
+            "PREFIX": "infrared_Sensor",
+            "TIME_INTERVAL": 5,
+            "RETAIN_PROBABILITY": 0.25,
+            "DATA": [
+                {
+                    "NAME": "infrared",
+                    "TYPE": "int",
+                    "MIN_VALUE": -40,
+                    "MAX_VALUE": 200,
+                    "MAX_STEP": 1
+                }
+            ]
+        },
+        {
+            "TYPE": "single",
+            "PREFIX": "UV_Sensor",
+            "TIME_INTERVAL": 5,
+            "RETAIN_PROBABILITY": 0.25,
+            "DATA": [
+                {
+                    "NAME": "uv",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0,
+                    "MAX_VALUE": 20,
+                    "MAX_STEP": 0.5
+                }
+            ]
+        },
+        {
+            "TYPE": "single",
             "PREFIX": "temperature-sensor2",
             "TIME_INTERVAL": 2.5,
             "RETAIN_PROBABILITY": 0.25,
@@ -101,20 +131,6 @@
                     "MIN_VALUE": 0.01,
                     "MAX_VALUE": 6.5,
                     "MAX_STEP": 0.1
-                },
-                {
-                    "NAME": "Infrared Sensor",
-                    "TYPE": "float",
-                    "MIN_VALUE": -40,
-                    "MAX_VALUE": 200,
-                    "MAX_STEP": 1
-                },
-                {
-                    "NAME": "UV Sensor",
-                    "TYPE": "float",
-                    "MIN_VALUE": 0,
-                    "MAX_VALUE": 20,
-                    "MAX_STEP": 0.5
                 }
             ]
         },
