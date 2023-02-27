@@ -172,6 +172,20 @@
                     "MIN_VALUE": 0.03,
                     "MAX_VALUE": 3,
                     "MAX_STEP": 0.1
+                },
+                {
+                    "NAME": "Infrared Sensor",
+                    "TYPE": "float",
+                    "MIN_VALUE": -40,
+                    "MAX_VALUE": 200,
+                    "MAX_STEP": 1
+                },
+                {
+                    "NAME": "UV Sensor",
+                    "TYPE": "float",
+                    "MIN_VALUE": 0,
+                    "MAX_VALUE": 20,
+                    "MAX_STEP": 0.5
                 }
             ]
         }
