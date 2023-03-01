@@ -19,6 +19,21 @@
         },
         {
             "TYPE": "single",
+            "PREFIX": "temperature-sensor2",
+            "TIME_INTERVAL": 2.5,
+            "RETAIN_PROBABILITY": 0.25,
+            "DATA": [
+                {
+                    "NAME": "temperature2",
+                    "TYPE": "int",
+                    "MIN_VALUE": 25,
+                    "MAX_VALUE": 80,
+                    "MAX_STEP": 5
+                }
+            ]
+        },
+        {
+            "TYPE": "single",
             "PREFIX": "gas-sensor",
             "TIME_INTERVAL": 5,
             "RETAIN_PROBABILITY": 0.5,
