@@ -14,11 +14,18 @@ class Topic(ABC):
         self.retain_probability = retain_probability
         self.client = None
 
+    # def connect(self):
+    #     self.client = mqtt.Client(self.topic_url, clean_session=True, transport='tcp')
+    #     self.client.on_publish = self.on_publish
+    #     self.client.connect(self.broker_url, self.broker_port) 
+    #     self.client.loop_start()
+
     def connect(self):
-        self.client = mqtt.Client(self.topic_url, clean_session=True, transport='tcp')
-        self.client.on_publish = self.on_publish
-        self.client.connect(self.broker_url, self.broker_port) 
-        self.client.loop_start()
+     self.client = mqtt.Client(self.topic_url, clean_session=True, transport='tcp')
+     self.client.on_publish = self.on_publish
+     self.client.connect(self.broker_url, self.broker_port) 
+     self.client.loop_start()
+
 
     @abstractmethod
     def run(self):

@@ -1,6 +1,8 @@
 import argparse
 from pathlib import Path
 from simulator import Simulator
+import socket
+socket.gethostbyname("")
 
 def default_settings():
     base_folder = Path(__file__).resolve().parent.parent
