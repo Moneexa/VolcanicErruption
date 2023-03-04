@@ -51,6 +51,16 @@ client.on("connect", function () {
       console.error(error);
     }
   });
+  client.subscribe("UV-sensor", function (error) {
+    if (error) {
+      console.error(error);
+    }
+  });
+  client.subscribe("infrared-sensor", function (error) {
+    if (error) {
+      console.error(error);
+    }
+  });
 });
 
 client.on("message", function (topic, message) {
