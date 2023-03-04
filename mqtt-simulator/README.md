@@ -5,7 +5,6 @@ Easy-to-configure MQTT simulator written in [Python 3](https://www.python.org/) 
 [Features](#features) •
 [Getting Started](#getting-started) •
 [Configuration](#configuration) •
-[Authors](#authors)
 
 ![Simulator Running](images/simulator-running.gif)
 
@@ -44,11 +43,6 @@ python3 mqtt-simulator/main.py
 Runs the simulator according to the settings file.  
 The terminal will show the simulator event log.
 
-Optionally, you can pass a flag with the path to settings file:
-
-```shell
-python3 mqtt-simulator/main.py -f <path/settings.json>
-```
 
 ## Configuration
 
@@ -108,16 +102,3 @@ python3 mqtt-simulator/main.py -f <path/settings.json>
         "MAX_STEP": 0.2
     }
     ```
-
-    | Key | Type | Description | Required |
-    | --- | --- | --- | --- |
-    | `NAME` | string | JSON property name to be sent | yes |
-    | `TYPE` | string | It can be `"int"`, `"float"` or `"bool"` | yes |
-    | `MIN_VALUE` | number | Minimum value that the property can assume | If `TYPE` is different from `"bool"` |
-    | `MAX_VALUE` | number | Maximum value that the property can assume | If `TYPE` is different from `"bool"` |
-    | `MAX_STEP` | number | Maximum change that can be applied to the property from a published data to the next | If `TYPE` is different from `"bool"` |
-
-## Authors
-
-[![DamascenoRafael](https://github.com/DamascenoRafael.png?size=70)](https://github.com/DamascenoRafael)
- [![Maasouza](https://github.com/Maasouza.png?size=70)](https://github.com/Maasouza)
