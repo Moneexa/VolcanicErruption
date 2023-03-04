@@ -26,7 +26,6 @@
             ]
         },
         {
-            // to get information about the heat signature of the area 
             "TYPE": "single",
             "PREFIX": "infrared-sensor",
             "TIME_INTERVAL": 5,
@@ -42,7 +41,6 @@
             ]
         },
         {
-            //to get information about the level of UV radiation in the area
             "TYPE": "single",
             "PREFIX": "UV-sensor",
             "TIME_INTERVAL": 5,
