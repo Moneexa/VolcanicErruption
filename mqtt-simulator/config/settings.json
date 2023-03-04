@@ -9,10 +9,17 @@
             "RETAIN_PROBABILITY": 0.25,
             "DATA": [
                 {
-                    "NAME": "temperature",
+                    "NAME": "temperature1",
                     "TYPE": "int",
                     "MIN_VALUE": 25,
                     "MAX_VALUE": 60,
+                    "MAX_STEP": 5
+                },
+                {
+                    "NAME": "temperature2",
+                    "TYPE": "int",
+                    "MIN_VALUE": 25,
+                    "MAX_VALUE": 80,
                     "MAX_STEP": 5
                 }
             ]
@@ -44,21 +51,6 @@
                     "MIN_VALUE": 0,
                     "MAX_VALUE": 20,
                     "MAX_STEP": 0.5
-                }
-            ]
-        },
-        {
-            "TYPE": "single",
-            "PREFIX": "temperature-sensor2",
-            "TIME_INTERVAL": 2.5,
-            "RETAIN_PROBABILITY": 0.25,
-            "DATA": [
-                {
-                    "NAME": "temperature2",
-                    "TYPE": "int",
-                    "MIN_VALUE": 25,
-                    "MAX_VALUE": 80,
-                    "MAX_STEP": 5
                 }
             ]
         },

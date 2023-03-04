@@ -10,17 +10,17 @@ Easy-to-configure MQTT simulator written in [Python 3](https://www.python.org/) 
 
 ## Features
 
-* Small and easy-to-configure simulator for publishing data to a broker  
-* Configuration from a single JSON file  
-* Connection on pre-defined fixed topics  
-* Connection on multiple topics that have a variable id or items at the end  
-* Random variation of data generated according to configuration parameters  
+- Small and easy-to-configure simulator for publishing data to a broker
+- Configuration from a single JSON file
+- Connection on pre-defined fixed topics
+- Connection on multiple topics that have a variable id or items at the end
+- Random variation of data generated according to configuration parameters
 
 ## Getting Started
 
 #### Prerequisites
 
-* [Python 3](https://www.python.org/) (with pip)
+- [Python 3](https://www.python.org/) (with pip)
 
 #### Installing Dependencies
 
@@ -43,62 +43,50 @@ python3 mqtt-simulator/main.py
 Runs the simulator according to the settings file.  
 The terminal will show the simulator event log.
 
-
 ## Configuration
 
-* The `config/settings.json` file has three main configuration parameters:
+- The `config/settings.json` file has three main configuration parameters:
 
-    ```json
-    {
-        "BROKER_URL": "mqtt.eclipse.org",
-        "BROKER_PORT": 1883,
-        "TOPICS": [
-            ...
-        ]
-    }
-    ```
+  ```json
+  {
+      "BROKER_URL": "mqtt.eclipse.org",
+      "BROKER_PORT": 1883,
+      "TOPICS": [
+          ...
+      ]
+  }
+  ```
 
-    | Key | Type | Description | Required |
-    | --- | --- | --- | --- |
-    | `BROKER_URL` | string | The broker URL where the data will be published | yes |
-    | `BROKER_PORT` | number | The port used by the broker | yes |
-    | `TOPICS` | array\<Objects> | Specification of topics and how they will be published | yes |
+  | Key           | Type            | Description                                            | Required |
+  | ------------- | --------------- | ------------------------------------------------------ | -------- |
+  | `BROKER_URL`  | string          | The broker URL where the data will be published        | yes      |
+  | `BROKER_PORT` | number          | The port used by the broker                            | yes      |
+  | `TOPICS`      | array\<Objects> | Specification of topics and how they will be published | yes      |
 
-* The key **TOPICS** has a array of objects where each one has the format:
+- The key **TOPICS** has a array of objects where each one has the format:
 
-    ```json
-    {
-        "TYPE": "multiple",
-        "PREFIX": "temperature",
-        "RANGE_START": 1,
-        "RANGE_END": 2,
-        "TIME_INTERVAL": 25,
-        "RETAIN_PROBABILITY": 0.5,
-        "DATA": [
-            ...
-        ]
-    }
-    ```
+  ```json
+  {
+      "TYPE": "multiple",
+      "PREFIX": "temperature",
+      "RANGE_START": 1,
+      "RANGE_END": 2,
+      "TIME_INTERVAL": 25,
+      "RETAIN_PROBABILITY": 0.5,
+      "DATA": [
+          ...
+      ]
+  }
+  ```
 
-    | Key | Type | Description | Required |
-    | --- | --- | --- | --- |
-    | `TYPE` | string | It can be `"single"`, `"multiple"` or `"list"` | yes |
-    | `PREFIX` | string | Prefix of the topic URL, depending on the `TYPE` it can be concatenated to `/<id>` or `/<item>` | yes |
-    | `LIST` | array\<any> | When the `TYPE` is `"list"` the topic prefix will be concatenated with `/<item>` for each item in the array | if `TYPE` is `"list"` |
-    | `RANGE_START` | number | When the `TYPE` is `"multiple"` the topic prefix will be concatenated with `/<id>` where `RANGE_START` will be the first number  | if `TYPE` is `"multiple"`  |
-    | `RANGE_END` | number | When the `TYPE` is `"multiple"` the topic prefix will be concatenated with `/<id>` where `RANGE_END` will be the last number | if `TYPE` is `"multiple"`  |
-    | `TIME_INTERVAL` | number | Time interval in seconds between submissions towards the topic | yes |
-    | `RETAIN_PROBABILITY` | number | Number between 0 and 1 for the probability of the previous data being retained and sent again | yes |
-    | `DATA` | array\<Objects> | Specification of the data that will form the JSON to be sent in the topic | yes |
+- The key **DATA** inside TOPICS has a array of objects where each one has the format:
 
-* The key **DATA** inside TOPICS has a array of objects where each one has the format:
-
-    ```json
-    {
-        "NAME": "temperature",
-        "TYPE": "float",
-        "MIN_VALUE": 30,
-        "MAX_VALUE": 40,
-        "MAX_STEP": 0.2
-    }
-    ```
+  ```json
+  {
+    "NAME": "temperature",
+    "TYPE": "float",
+    "MIN_VALUE": 30,
+    "MAX_VALUE": 40,
+    "MAX_STEP": 0.2
+  }
+  ```
